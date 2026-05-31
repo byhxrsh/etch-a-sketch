@@ -2,6 +2,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: rgb(15, 144, 144);
 }
 
 #container {
@@ -13,9 +14,13 @@ body {
 	gap: 1px;
 }
 
-#childDivs {
+#childDiv {
 	width: 32px;
 	height: 32px;
+	background-color: rgb(255, 255, 255);
+}
+
+#childDiv:hover {
 	background-color: black;
 }
 
