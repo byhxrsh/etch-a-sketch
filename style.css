@@ -1,21 +1,45 @@
 body {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: rgb(15, 144, 144);
 }
 
 #container {
-  width: 527px;
-	height: 527px;
 	border: 5px solid rgb(182, 182, 22);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1px;
+	width: 580px;
+	height: 580px;
+}
+
+.childDiv {
+	flex-basis: 35px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	background-color: rgb(255, 255, 255);
+}
+
+button {
+	width: 200px;
+	height: 50px;
+	margin-bottom: 25px;
+}
+
+#addContainer {
+    border: 5px solid rgb(182, 182, 22);
+    width: 580px;
+    height: 580px;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1px;
 }
 
-#childDiv {
-	width: 32px;
-	height: 32px;
-	background-color: rgb(255, 255, 255);
+.cell {
+    flex-basis: 25px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: rgb(255, 255, 255);
 }
