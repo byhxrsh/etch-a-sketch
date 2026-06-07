@@ -11,10 +11,9 @@ for (let i = 0; i < 256; i++) {
 };
 
 const btn = document.querySelector('#select');
+const superContainer = document.querySelector('#superContainer');
 
 btn.addEventListener('click', (event) => {
-  parentContainer.remove();
-
   let storeInput = prompt('enter a valid size!', 16);
   let totalCells = storeInput ** 2;
   console.log(storeInput);
@@ -23,11 +22,14 @@ btn.addEventListener('click', (event) => {
   if (storeInput <= 100) {
     const updatedContainer = document.createElement('div');
     updatedContainer.setAttribute('id', 'addContainer');
-    document.body.appendChild(updatedContainer);
+    superContainer.replaceChildren(updatedContainer);
+    let cellSize = ((580 - (storeInput - 1)) / storeInput);
 
     for (i = 0; i < totalCells; i++) {
       let gridCell = document.createElement('div');
 	    gridCell.className = 'cell';
+      gridCell.style.width = `${cellSize}px`;
+      gridCell.style.height = `${cellSize}px`;
 	    updatedContainer.appendChild(gridCell);
 
       gridCell.addEventListener('mouseover', () => {

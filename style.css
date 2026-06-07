@@ -38,8 +38,5 @@ button {
 }
 
 .cell {
-    flex-basis: 25px;
-    flex-grow: 1;
-    flex-shrink: 1;
     background-color: rgb(255, 255, 255);
 }
