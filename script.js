@@ -6,7 +6,19 @@ for (let i = 0; i < 256; i++) {
 	parentContainer.appendChild(childDiv);
 
   childDiv.addEventListener('mouseover', () => {
-    childDiv.style.backgroundColor = 'black';
+    let randomInt = Math.floor(Math.random() * 5);
+    
+    if (randomInt === 0) {
+      childDiv.style.backgroundColor = 'rgb(255, 0, 0)';
+    } else if (randomInt === 1) {
+      childDiv.style.backgroundColor = 'rgb(60, 179, 113)';
+    } else if (randomInt === 2) {
+      childDiv.style.backgroundColor = 'rgb(238, 130, 238)';
+    } else if (randomInt === 3) {
+      childDiv.style.backgroundColor = 'rgb(106, 90, 205)';
+    } else {
+      childDiv.style.backgroundColor = 'rgb(255, 165, 0)';
+    }
   });
 };
 
@@ -16,8 +28,6 @@ const superContainer = document.querySelector('#superContainer');
 btn.addEventListener('click', (event) => {
   let storeInput = prompt('enter a valid size!', 16);
   let totalCells = storeInput ** 2;
-  console.log(storeInput);
-  console.log(totalCells);
 
   if (storeInput <= 100) {
     const updatedContainer = document.createElement('div');
@@ -33,11 +43,23 @@ btn.addEventListener('click', (event) => {
 	    updatedContainer.appendChild(gridCell);
 
       gridCell.addEventListener('mouseover', () => {
-        gridCell.style.backgroundColor = 'black';
+        let randomInt = Math.floor(Math.random() * 5);
+    
+        if (randomInt === 0) {
+          gridCell.style.backgroundColor = 'rgb(255, 0, 0)';
+        } else if (randomInt === 1) {
+          gridCell.style.backgroundColor = 'rgb(60, 179, 113)';
+        } else if (randomInt === 2) {
+          gridCell.style.backgroundColor = 'rgb(238, 130, 238)';
+        } else if (randomInt === 3) {
+          gridCell.style.backgroundColor = 'rgb(106, 90, 205)';
+        } else {
+          gridCell.style.backgroundColor = 'rgb(255, 165, 0)';
+        }
       }); 
     };
   } else {
     alert('invalid size selection.');
-  }
+  };
 
 });
