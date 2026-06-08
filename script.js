@@ -29,7 +29,7 @@ btn.addEventListener('click', (event) => {
   let storeInput = prompt('enter a valid size!', 16);
   let totalCells = storeInput ** 2;
 
-  if (storeInput <= 100) {
+  if (storeInput <= 100 && storeInput > 0 && Boolean(Number.isInteger(storeInput))) {
     const updatedContainer = document.createElement('div');
     updatedContainer.setAttribute('id', 'addContainer');
     superContainer.replaceChildren(updatedContainer);
